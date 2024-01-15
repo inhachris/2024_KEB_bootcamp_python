@@ -1,9 +1,16 @@
-letter = input("Input alphabet letter : ")
-# vowels = {'a', 'e', 'i', 'o', 'u'}     # set
-vowels = "aeiou"     # str
-print(type(vowels))
+# (100°F - 32) × 5/9 = 37.778°C
+# (0°C × 9/5) + 32 = 32°F
 
-if letter in vowels:     # in
-    print(f'{letter} is a vowel~')
-else:
-    print(f'{letter} is a consonant!')
+i = 1
+while i == True:
+    menu = input("1) Fahrenheit -> Celsius     2) Celsius -> Fahrenheit     3) Quit Program : ")
+
+    if menu == '1':
+        fahrenheit = float(input('Input Fahrenheit : '))
+        print(f'Fahrenheit : {fahrenheit}°F   ->   Celsius : {((fahrenheit - 32.0) * 5.0 / 9.0):.4f}°C\n')
+    elif menu == '2':
+        celsius = float(input('Input Celcius : '))
+        print(f'Celsius : {celsius}°C   ->   Fahrenheit : {((celsius*9.0/5.0) + 32.0):.4f}°F\n')
+    elif menu == '3':
+        print("Terminate Program")
+        break
