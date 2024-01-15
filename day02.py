@@ -1,17 +1,15 @@
-# SyntaxError: cannot assign to literal here.
-# "univ" = "Inha University"
-# 99 =71
+x = 2
+y = x + 5 # NameError: name 'x' is not defined
+print(y)
 
-# Ok
-# case-sensitive
-abc = 7
-Abc = 8
-ABC = 6
-print(abc, ABC, Abc)
+print(type(3.14))
+print(type(3.14) == float)
+print(isinstance(3.14, float))
+print(isinstance("Inha", float))
+print(isinstance(55, float))
 
-test9 = 77
-# 9test = 77
-_9test = 71
-print(test9, _9test)
-
-# False = 123 # reserved word
+artists = ['BTS', '뉴진스', '핑클', 'SES', 'HOT', '블랙핑크']
+groups = artists
+print(artists, groups)
+artists[2] = '세븐틴'
+print(artists, groups)
