@@ -1,9 +1,8 @@
-# assignment Exercise 6.2 (p.143)
+# assignment Exercise 6.3 (p.144)
 
-guess_me = 7
-number = 1
+guess_me = 5
 
-while True:
+for number in range(10):
     if number < guess_me:
         print("too low")
     elif number == guess_me:
@@ -12,4 +11,3 @@ while True:
     elif number > guess_me:
         print("oops")
         break
-    number = number + 1
