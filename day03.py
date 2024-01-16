@@ -1,6 +1,15 @@
-# assignment Exercise 6.1 (p.143)
+# assignment Exercise 6.2 (p.143)
 
-list_ = list(range(3, -1, -1))
+guess_me = 7
+number = 1
 
-for i in list_:
-    print(i, end= ' ')
+while True:
+    if number < guess_me:
+        print("too low")
+    elif number == guess_me:
+        print("found it!")
+        break
+    elif number > guess_me:
+        print("oops")
+        break
+    number = number + 1
