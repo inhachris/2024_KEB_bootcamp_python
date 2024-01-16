@@ -1,8 +1,8 @@
+# Assignment
 # (100°F - 32) × 5/9 = 37.778°C
 # (0°C × 9/5) + 32 = 32°F
 
-i = 1
-while i:
+while True:
     menu = input("1) Fahrenheit -> Celsius     2) Celsius -> Fahrenheit     3) Quit Program : ")
 
     if menu == '1':
