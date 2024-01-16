@@ -3,6 +3,9 @@ numbers = input("Input first second number : ").split()
 n1 = int(numbers[0])
 n2 = int(numbers[1])
 
+if n1 > n2:
+    n1, n2 = n2, n1
+
 for number in range(n1, n2+1):
     is_prime = True
 
