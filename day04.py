@@ -1,5 +1,5 @@
-# Assignment Exercise 8.6 (p.206)
+# Assignment Exercise 8.7 (p.207)
 
 life = {'animals': {'cats': 'Henri', 'octopi': 'Grumpy', 'emus': 'Lucy'}, 'plants': {}, 'other': {}}
 
-print(life)
+print(f'life 딕셔너리의 최상위 키 : {list(life.keys())}')
