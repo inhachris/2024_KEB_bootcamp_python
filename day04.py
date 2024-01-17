@@ -1,5 +1,5 @@
-# Assignment Exercise 8.5 (p.205)
+# Assignment Exercise 8.6 (p.206)
 
-e2f = {"dog": "chien", "cat": "chat", "walrus": "morse"}
+life = {'animals': {'cats': 'Henri', 'octopi': 'Grumpy', 'emus': 'Lucy'}, 'plants': {}, 'other': {}}
 
-print(list(e2f.keys()))
+print(life)
