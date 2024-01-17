@@ -14,14 +14,14 @@ t7 = ()
 t8 = tuple()
 print(type(t7), type(t8), type(9,), type((9,)))
 t9 = 1, 2, 3
-t10 = 1, 2
+t10 = 1, 21
 print(t9 == t10)
 print(t9 <= t10)
 print(t9 > t10)
-t11 = 4.43,
-t12 = 3.97, 4.1, 3.27
-#print(t11 + t12)
-print(id(t11))
-t11 = t11 + t12    # t11 += t12
-print(id(t11))
-print(t11)
+# t11 = 4.43,
+# t12 = 3.97, 4.1, 3.27
+# #print(t11 + t12)
+# print(id(t11))
+# t11 = t11 + t12    # t11 += t12
+# print(id(t11))
+# print(t11)
