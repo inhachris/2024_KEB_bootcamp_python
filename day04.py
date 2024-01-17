@@ -1,5 +1,4 @@
-# Assignment Exercise 8.9 (p.207)
+# Assignment Exercise 8.10 (p.207)
 
-life = {'animals': {'cats': 'Henri', 'octopi': 'Grumpy', 'emus': 'Lucy'}, 'plants': {}, 'other': {}}
-
-print(life['animals']['cats'])
+squares = {key: key*key for key in range(10)}
+print(squares)
