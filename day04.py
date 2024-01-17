@@ -1,4 +1,4 @@
-# Assignment Exercise 8.1 (p.205)
+# Assignment Exercise 8.2 (p.205)
 
 e2f = {"dog": "chien", "cat": "chat", "walrus": "morse"}
-print(e2f)
+print(e2f["walrus"])
