@@ -1,7 +1,5 @@
-# Assignment Exercise 8.4 (p.205)
+# Assignment Exercise 8.5 (p.205)
 
 e2f = {"dog": "chien", "cat": "chat", "walrus": "morse"}
-f2e = {value: key for key, value in e2f.items()}
 
-print(f2e)
-print(f2e['chien'])
+print(list(e2f.keys()))
