@@ -1,7 +1,14 @@
-# Assignment Exercise 9.1 (p.242)
+# Assignment Exercise 9.2 (p.242)
 
-def good():
-    return ['Harry', 'Ron', 'Hermione']
+def get_odds():
+    for number in range(1, 10, 2):
+        yield number
 
-a = good()
-print(a)
+# print(list(get_odds()))
+
+i = 0
+for odd in get_odds():
+    i += 1
+    if i == 3:
+        print("세 번째 홀수:", odd)
+        break
