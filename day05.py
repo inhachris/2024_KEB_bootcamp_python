@@ -1,14 +1,15 @@
 # Assignment Exercise 9.2 (p.242)
 
-def get_odds():
-    for number in range(1, 10, 2):
-        yield number
+def test(func):
+    def new_function(*args, **kwargs):
+        print("start")
+        result = func(*args, **kwargs)
+        print("end")
+        return result
+    return new_function
 
-# print(list(get_odds()))
+@test
+def example_function():
+    print("This is the main function.")
 
-i = 0
-for odd in get_odds():
-    i += 1
-    if i == 3:
-        print("세 번째 홀수:", odd)
-        break
+example_function()
