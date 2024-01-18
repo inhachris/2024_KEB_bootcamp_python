@@ -1,15 +1,11 @@
-# Assignment Exercise 9.2 (p.242)
+# Assignment Exercise 9.4 (p.242)
 
-def test(func):
-    def new_function(*args, **kwargs):
-        print("start")
-        result = func(*args, **kwargs)
-        print("end")
-        return result
-    return new_function
+class OopsException(Exception):
+    pass
 
-@test
-def example_function():
-    print("This is the main function.")
+# raise OopsException()
 
-example_function()
+try:
+    raise OopsException("Oops!")
+except OopsException:
+    print('Caught an oops')
