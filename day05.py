@@ -1,24 +1,18 @@
-# def squares(n):
-#     return n * n
+# # inner function
+# def out_func(nout):
+#     def inner_func(nin):
+#         return nin * nin
+#     return inner_func(nout)
 #
-# def run_function(f, number):
-#     return f(number)
+# print(out_func(5))
 
-# print(squares(7))
-# print(run_function(squares, 9))
+# Closure
+def out_func(nout):
+    def inner_func():
+        return nout * nout
+    return inner_func
 
-def squares(*n) -> list:
-    """
-    넘겨 받은 수치 데이터들의 거듭제곱 값을 리스트에 담아서 리턴
-    :param n: tuple
-    :return: list
-    """
-    return [i*i for i in n]
-    # return n * n
-
-def run_function(f, *number) -> list:
-    return f(*number)
-
-
-print(squares(7, 5, 2))
-print(run_function(squares, 9, 10))
+x = out_func(9)
+print(type(x))
+print(x)
+print(x())
