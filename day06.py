@@ -1,27 +1,28 @@
 class FlyingMixin:
     def fly(self):
-        return f"{self.hidden_name}이(가) 하늘을 훨훨 날아갑니다~"
+        return f"{self.__name}이(가) 하늘을 훨훨 날아갑니다~"
 
 class SwimmingMixin:
     def swim(self):
-        return f"{self.hidden_name}이(가) 수영을 합니다."
+        return f"{self.__name}이(가) 수영을 합니다."
 
 class Pokemon:
     def __init__(self, name):
-        self.hidden_name = name
+        self.__name = name
 
-    def attack(self):    # self는 반드시 객체 (클래스x)
+    def attack(self):
         print("공격~")
 
     @property
     def name(self):
-        return self.hidden_name
+        return self.__name
 
     @name.setter
     def name(self, new_name):
-        self.hidden_name = new_name
+        self.__name = new_name
 
     #name = property(get_name, set_name)
+
 
 class Charizard(Pokemon, FlyingMixin):
     pass
@@ -29,16 +30,17 @@ class Charizard(Pokemon, FlyingMixin):
 class Gyarados(Pokemon, SwimmingMixin):
     pass
 
-
 g1 = Gyarados("갸라도스")
 c1 = Charizard("리자몽")
 
-# property 1st
 # print(g1.get_name())
 # g1.set_name("잉어킹")
 # print(g1.get_name())
 
-# property 2nd
+# property 3rd
 print(g1.name)
+#print(g1.__name)  # direct access X
+#g1._Pokemon__name = "잉어킹"
 g1.name = "잉어킹"
-print(g1.name)
+#g1.__name = "잉어킹"
+print(g1._Pokemon__name)  # 사실 상 private 개념은 없는 걸로
