@@ -1,12 +1,8 @@
-def desc(f):
-    def wrapper():
-        print("study")
-        f()
-    # print("a")
-    return wrapper
+# class Pokemon():
+class Pokemon:
+    def __init__(self, name):
+        print(f"{name} 포켓몬스터 생성")
 
-def something():
-    print("do something")
 
-s = desc(something)
-s()
+pikachu = Pokemon("피카츄")
+squirtle = Pokemon("꼬부기")
