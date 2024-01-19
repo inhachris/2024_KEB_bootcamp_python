@@ -1,11 +1,9 @@
-# Assignment Exercise 9.4 (p.242)
+def good() -> list:
+    """
+    chapter 9 things to do. 91.
+    :return: list
+    """
+    harry_porter = input().split()
+    return harry_porter
 
-class OopsException(Exception):
-    pass
-
-# raise OopsException()
-
-try:
-    raise OopsException("Oops!")
-except OopsException:
-    print('Caught an oops')
+print(good())
