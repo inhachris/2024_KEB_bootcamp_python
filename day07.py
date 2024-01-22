@@ -29,6 +29,10 @@ class Pokemon:
         self.fly_behavior = fly  # aggregation (has-a)
 
 
+    def set_fly_behavior(self, fly):
+        self.fly_behavior = fly
+
+
     def attack(self):
         print("공격~")
 
@@ -56,12 +60,14 @@ class Pikachu(Pokemon):
     pass
 
 nofly = NoFly()
-g1 = Pikachu("피카츄", 35, nofly)  # LSP
+p1 = Pikachu("피카츄", 35, nofly)  # LSP
 wings = FlyWithWings()
 c1 = Charizard("리자몽", 120, wings)  # LSP
 print(c1.fly_behavior.fly())
-print(g1.fly_behavior.fly())
-print(g1)
+print(p1.fly_behavior.fly())
+print(p1)
 print(c1)
-print(g1+c1)
+print(p1+c1)
 #print(g1+200)
+p1.set_fly_behavior(JetPack())
+print(p1.fly_behavior.fly())
