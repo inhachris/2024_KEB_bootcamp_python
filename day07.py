@@ -21,9 +21,12 @@ class Pokemon:
     def name(self, new_name):
         self.__name = new_name
 
-    #name = property(get_name, set_name)
+    #magic method
     def __str__(self):
         return self.__name + "입니다."
+
+    def __add__(self, target):
+        return (self.__name + " + " + target.__name)
 
 class Charizard(Pokemon, FlyingMixin):
     pass
