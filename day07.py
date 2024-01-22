@@ -1,30 +1,36 @@
-class FlyingBehavior:
-    def fly(self):
-        return f"하늘을 훨훨 날아갑니다~"
+# module
+import mymath
 
 
-class JetPack(FlyingBehavior):
-    def fly(self):
-        return f"로켓추진기로 하늘을 날아갑니다!"
+while True:
+    menu = input("1) Fahrenheit -> Celsius   2) Celsius -> Fahrenheit   3) Prime1   4) Prime2   5) Quit program : ")
 
+    if menu == '1':
+        fahrenheit = float(input('Input Fahrenheit : '))
+        print(f'Fahrenheit : {fahrenheit}F, Celsius : {((fahrenheit-32.0)*5.0/9.0):.4f}C')
+    elif menu == '2':
+        celsius = float(input('Input Celsius : '))
+        print(f'Celsius : {celsius}C, Fahrenheit : {((celsius*9.0/5.0)+32.0):.4f}F')
+    elif menu == '3':
+        number = int(input("Input number : "))
+        if mymath.isprime(number):
+            print(f'{number} is prime number')
+        else:
+            print(f'{number} is NOT prime number!')
+    elif menu == '4':
+        numbers = input("Input first second number : ").split()
+        n1 = int(numbers[0])
+        n2 = int(numbers[1])
 
-class NoFly(FlyingBehavior):
-    def fly(self):
-        return f"하늘을 날 수 없습니다."
+        if n1 > n2:
+            n1, n2 = n2, n1
 
-
-class FlyWithWings(FlyingBehavior):
-    def fly(self):
-        return f"날개로 하늘을 훨훨 날아갑니다"
-
-
-
-class Pikachu:
-    def __init__(self, name, hp):
-        self.name = name
-        self.hp = hp
-        self.fly_behavior = NoFly()  # composition
-
-
-p1 = Pikachu("피카츄", 35)
-print(p1.fly_behavior.fly())
+        for number in range(n1, n2 + 1):
+            if mymath.isprime(number):
+                print(number, end=' ')
+        print()
+    elif menu == '5':
+        print('Terminate Program.')
+        break
+    else:
+        print('Invalid Menu!')
