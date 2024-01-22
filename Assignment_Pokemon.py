@@ -1,36 +1,14 @@
 # Assignment Pokemon Game
 
-class Pokemon:
-    def __init__(self, name):
-        self.name = name
-
-    def attack(self, target):
-        print(f"{self.name}가 {target.name}를 공격!")
-
-class Charmander(Pokemon):
-    def __init__(self, name, type):
-        super().__init__(name)
-        self.type = type
-
-class Squirtle(Pokemon):
-    def __init__(self, name, type):
-        super().__init__(name)
-        self.type = type
-
-class Bulbasaur(Pokemon):
-    def __init__(self, name, type):
-        super().__init__(name)
-        self.type = type
-
-class Pikachu(Pokemon):
-    def __init__(self, name, type):
-        super().__init__(name)
-        self.type = type
+from pokemon_module import *
+import random
 
 c1 = Charmander("파이리", "불꽃")
 s1 = Squirtle("꼬부기", "물")
 b1 = Bulbasaur("이상해씨", "풀")
 p1 = Pikachu("피카츄", "전기")
+
+pokelist = [c1, s1, b1, p1]
 
 # 스타팅 포켓몬 선택
 while True:
@@ -88,13 +66,15 @@ while True:
 
 while True:
     try:
-        behavior = int(input(f"야생의 {s1.name}를 만났다!\n1)공격  2)도망  3)게임종료 : "))
+        target = random.choice(pokelist)
+        behavior = int(input(f"야생의 {target.name}를 만났다!\n1)일반공격  2)타입공격  3)도망  4)게임종료 : "))
         if behavior == 1:
-            print(f"{starting_pokemon.name}가 {c1.name}를 {starting_pokemon.type} 공격!\n")
+            print(f"{starting_pokemon.name}가 {target.name}에게 몸통박치기 공격!\n")
         elif behavior == 2:
-            print(f"{starting_pokemon.name}와 무사히 도망쳤다\n")
-            break
+            print(f"{starting_pokemon.name}가 {target.name}에게 {starting_pokemon.type}타입 공격!\n")
         elif behavior == 3:
+            print(f"{starting_pokemon.name}와 무사히 도망쳤다\n")
+        elif behavior == 4:
             print(f"게임을 종료합니다\n")
             break
     except ValueError:
